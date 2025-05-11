@@ -8,15 +8,18 @@
 <body>
     <h1>Hi there!! I'm Jean Claude ISHIMWE. I'm a Web Developer, 
         I'm dealing with Computer Science in University of 
-        Rwanda College of Science and Technology (UR-CST).
+        Rwanda College of Science and Technology "UR-CST".
     </h1>
-        <div id="div1">
-        This is Bubbling.
-        <div id="num1">Click me</div>
-    </div>
-    <div id="div2">
-        This is Capturing.
-        <div id="num2">Click me</div>
-    </div>
+    <button onclick="countClicks()">Click me!</button>
+    <p>You clicked <span id="click-count">0</span> times.</p>
+
+    <script>
+        let count = 0; // This is our variable to track clicks
+
+        function countClicks() {
+        count = count + 1; // Increase count by 1
+        document.getElementById("click-count").innerText = count;
+        }
+    </script>
 </body>
 </html>
